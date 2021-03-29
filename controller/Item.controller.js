@@ -1,8 +1,8 @@
-const Item = require('../model/Item.model');
-const ItemType = require('../model/ItemType.model');
-const Shop = require('../model/Shop.model');
-const Color= require('../model/Color.model');
-const Buyer = require('../model/Buyer.model');
+const Item = require('../model/Item');
+const ItemType = require('../model/ItemType');
+const Shop = require('../model/Shop');
+const Color= require('../model/Color');
+const Buyer = require('../model/Buyer');
 const item = require('../model/item');
 
 let Save_Item = function(itemP,titleP,shopP,colorP,buyerP,callback)//'p' represent parameters
