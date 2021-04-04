@@ -1,15 +1,15 @@
 const express = require("express");
-const mongoose= require("mongoose");
+const mongoose = require("mongoose");
 
-const router= express.Router();
+const router = express.Router();
 const ItemModel = mongoose.model("Item")
 const ShopModel = mongoose.model("Shop")
 const BuyerModel = mongoose.model("Buyer")
-const ItemController = require("../../Goodsle/controller/Item.controller");
-const item = require("../model/item");
+const ItemController = require("../controller/Item.controller");
+// const item = require("../model/item");
 
 
-router.post("/save_Item",(req,res)=>{
+router.post("/save_Item", (req, res) => {
     const Item = new ItemModel({
         name: req.body.Itemname,
         size: req.body.size,
@@ -28,14 +28,20 @@ router.post("/save_Item",(req,res)=>{
         phonenumber: req.body.Shopphonenumber,
         location: req.body.Shoplocation
     });
-    ItemController.Save_Item(Item,req.body.ItemType,shop,req.body.color,buyer,function(res){
-        if(res)
-        {
-            res.send("success");
-        }
-        else
-        {
-            res.send("failure")
-        }
-    })
+    // res.send(req.body)
+    console.log(req.body);
+
+    // ItemController.Save_Item(Item, req.body.ItemType, shop, req.body.color, buyer, function (res) {
+    //     if (res) {
+    //         res.send("success");
+    //     }
+    //     else {
+    //         res.send("failure")
+    //     }
+    // })
 })
+
+router.get('/hello', (req, res) => {
+    res.send('Hello you got the route')
+})
+module.exports = router

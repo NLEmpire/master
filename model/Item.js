@@ -2,42 +2,42 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema 
-const ItemSchema = new Schema ({
-    name:{
+const ItemSchema = new Schema({
+    name: {
         type: String,
-        required:true
+        required: true
     },
-    color:{
+    color: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Color",
-        required:true
+        required: true
     },
     type: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "ItemType",
-        required=true
+        required: true
     },
     size: {
         type: String,
-        required=true
+        required: true
     },
     price: {
-        type: Float64Array,
-        required=true
+        type: Number,
+        required: true
     },
     location: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Shop",
-        required=true
+        required: true
     },
     purchasedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Buyer",
-        required=true
+        required: true
     },
     purchasedOn: {
         type: Date,
-        required=true
+        required: true
     }
 });
- module.exports = Item = mongoose.model('Item', ItemSchema);
+module.exports = Item = mongoose.model('Item', ItemSchema);

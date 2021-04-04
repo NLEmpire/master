@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema 
-const TransportSchema = new Schema ({
+const TransportSchema = new Schema({
     StartingPoint: {
         type: String,
-        required=true
+        required: true
     },
     Destination: {
         type: String,
-        require=true
+        require: true
     },
     Cost: {
-        type: Float32Array
+        type: Number
     }
 });
- module.exports = Transport = mongoose.model('Transport', TransportSchema);
+module.exports = Transport = mongoose.model('Transport', TransportSchema);

@@ -2,26 +2,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema 
-const BuyerSchema = new Schema ({
-    name:{
+const BuyerSchema = new Schema({
+    name: {
         type: String,
-        required:true
+        required: true
     },
-    username:{
+    username: {
         type: String,
-        required:true
+        required: true
     },
     phonenumber: {
         type: String,
-        required=true
+        required: true
     },
     numberofuploads: {
         type: String,
-        required=true
+        required: true
     },
     location: {
         type: String,
-        required=true
+        required: true
     }
 });
- module.exports = Buyer = mongoose.model('Buyer', BuyerSchema);
+module.exports = Buyer = mongoose.model('Buyer', BuyerSchema);

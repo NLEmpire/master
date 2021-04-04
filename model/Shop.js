@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema 
-const ShopSchema = new Schema ({
+const ShopSchema = new Schema({
     name: {
         type: String,
-        required=true
+        required: true
     },
     officeNumber: {
-        type: Int16Array
+        type: Number
     },
     phoneNumber: {
-        type: Int16Array
+        type: Number
     },
     location: {
         type: String
     }
 });
- module.exports = Shop = mongoose.model('Shop', ShopSchema);
+module.exports = Shop = mongoose.model('Shop', ShopSchema);

@@ -2,30 +2,30 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema 
-const SearchSchema = new Schema ({
-    username:{
+const SearchSchema = new Schema({
+    username: {
         type: String,
-        required:true
+        required: true
     },
-    query:{
+    query: {
         type: String,
-        required:true
+        required: true
     },
     is_Baught: {
         type: Boolean,
-        required=true
+        required: true
     },
     Location: {
         type: String,
-        required=true
+        required: true
     },
     SearchedOn: {
         type: Date,
-        required=true
+        required: true
     },
     BaughtOn: {
         type: Date,
-        required=true
+        required: true
     }
 });
- module.exports = Search = mongoose.model('Search', SearchSchema);
+module.exports = Search = mongoose.model('Search', SearchSchema);
